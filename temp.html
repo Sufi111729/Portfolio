@@ -71,7 +71,7 @@
               <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -90,80 +90,101 @@
 
   <main class="main">
 
-  <main class="main">
-    <div class="page-title">
-      <div class="title-wrapper">
-        <h1>Portfolio Details</h1>
-        <p>Welcome to my portfolio! I am Muhammad Sufiyan, a Java Full Stack Developer passionate about coding and web
-          development.</p>
-      </div>
-    </div>
-
-    <section id="portfolio-details" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
-        <div class="row gy-4 g-lg-5">
-          <div class="col-lg-6">
-            <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid mb-4" alt="Portfolio Image">
-          </div>
-          <div class="col-lg-6">
-            <div class="position-sticky" style="top: 40px">
-              <div class="portfolio-description">
-                <h2>About This Project</h2>
-                <p>
-                  This project showcases my expertise in Java Full Stack Development, React, SQL, and API integration. I
-                  have worked on various web applications, including e-commerce, portfolio sites, and database-driven
-                  platforms.
-                </p>
-              </div>
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Coding is my passion, and I love solving complex problems with efficient solutions."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <div>
-                  <h3>Muhammad Sufiyan</h3>
-                  <h4>Java Full Stack Developer</h4>
-                </div>
-              </div>
-              <div class="portfolio-info mt-5">
-                <h3>Project information</h3>
-                <ul>
-                  <li><strong>Category:</strong> Web Development</li>
-                  <li><strong>Client:</strong> PrimeHouse</li>
-                  <li><strong>Project date:</strong> 10 March, 2025</li>
-                  <li><strong>Project URL:</strong> <a href="#">www.muhammadsufiyan.dev</a></li>
-                  <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
-                </ul>
-              </div>
+        <div class="page-title">
+            <div class="breadcrumbs">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="bi bi-house"></i> Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item active current">Custom Clothing & Alterations</li>
+                    </ol>
+                </nav>
             </div>
-          </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            height: 85%;
+        }
+        input, select, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Sufiyan</strong> <span>All Rights
-            Reserved</span></p>
-      </div>
-      <div class="credits">
-        Designed by <a href="#">Muhammad Sufiyan</a>
-      </div>
+        <h2>Temperature Converter</h2>
+        <input type="number" id="temperature" placeholder="Enter temperature">
+        <select id="unit">
+            <option value="celsius">Celsius to Fahrenheit</option>
+            <option value="fahrenheit">Fahrenheit to Celsius</option>
+        </select>
+        <br>
+        <button onclick="convertTemperature()">Convert</button>
+        <p id="result">Result will appear here</p>
     </div>
-  </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <script>
+        function convertTemperature() {
+            let temp = parseFloat(document.getElementById("temperature").value);
+            let unit = document.getElementById("unit").value;
+            let result = document.getElementById("result");
+            
+            if (isNaN(temp)) {
+                result.innerText = "Please enter a valid number";
+                return;
+            }
+            
+            if (unit === "celsius") {
+                let fahrenheit = (temp * 9/5) + 32;
+                result.innerText = `${temp}°C is ${fahrenheit.toFixed(2)}°F`;
+            } else {
+                let celsius = (temp - 32) * 5/9;
+                result.innerText = `${temp}°F is ${celsius.toFixed(2)}°C`;
+            }
+        }
+    </script>
 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
 
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  
 </body>
-
 </html>

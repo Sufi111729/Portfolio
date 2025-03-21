@@ -90,80 +90,111 @@
 
   <main class="main">
 
-  <main class="main">
-    <div class="page-title">
-      <div class="title-wrapper">
-        <h1>Portfolio Details</h1>
-        <p>Welcome to my portfolio! I am Muhammad Sufiyan, a Java Full Stack Developer passionate about coding and web
-          development.</p>
-      </div>
-    </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
 
-    <section id="portfolio-details" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
-        <div class="row gy-4 g-lg-5">
-          <div class="col-lg-6">
-            <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid mb-4" alt="Portfolio Image">
-          </div>
-          <div class="col-lg-6">
-            <div class="position-sticky" style="top: 40px">
-              <div class="portfolio-description">
-                <h2>About This Project</h2>
-                <p>
-                  This project showcases my expertise in Java Full Stack Development, React, SQL, and API integration. I
-                  have worked on various web applications, including e-commerce, portfolio sites, and database-driven
-                  platforms.
-                </p>
-              </div>
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Coding is my passion, and I love solving complex problems with efficient solutions."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <div>
-                  <h3>Muhammad Sufiyan</h3>
-                  <h4>Java Full Stack Developer</h4>
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            height: 85%;
+        }
+
+        label,
+        input {
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        input {
+            padding: 5px;
+            width: 60px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #randomNumber {
+            font-size: 24px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="row gy-4 g-lg-5">
+                <div class="col-lg-6">
+                    <div style="max-width: 400px; margin: auto;">
+                        <img src="assets/img/portfolio/Randome number.png" class="img-fluid mb-4" alt="Portfolio Image">
+                    </div>
+
                 </div>
-              </div>
-              <div class="portfolio-info mt-5">
-                <h3>Project information</h3>
-                <ul>
-                  <li><strong>Category:</strong> Web Development</li>
-                  <li><strong>Client:</strong> PrimeHouse</li>
-                  <li><strong>Project date:</strong> 10 March, 2025</li>
-                  <li><strong>Project URL:</strong> <a href="#">www.muhammadsufiyan.dev</a></li>
-                  <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+                <div class="col-lg-6">
+                    <div class="position-sticky" style="top: 40px">
 
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Sufiyan</strong> <span>All Rights
-            Reserved</span></p>
-      </div>
-      <div class="credits">
-        Designed by <a href="#">Muhammad Sufiyan</a>
-      </div>
-    </div>
-  </footer>
+                        <h2>Random Number Generator</h2>
+                        <label for="min">Min:</label>
+                        <input type="number" id="min" value="1">
+                        <label for="max">Max:</label>
+                        <input type="number" id="max" value="100">
+                        <br>
+                        <button onclick="generateRandomNumber()">Generate</button>
+                        <p id="randomNumber">Click the button to get a number</p>
+                    </div>
+                    <div id="color">
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+                    </div>
 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+                    <script>
+                        function generateRandomNumber() {
+                            const min = parseInt(document.getElementById("min").value);
+                            const max = parseInt(document.getElementById("max").value);
+                            if (isNaN(min) || isNaN(max) || min >= max) {
+                                document.getElementById("randomNumber").innerText = "Please enter a valid range.";
+                                return;
+                            }
+                            const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+                            document.getElementById("randomNumber").innerText = "Random Number: " + randomNumber;
+                        }
+                    </script>
 
-</body>
+
+                    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                    <script src="assets/vendor/aos/aos.js"></script>
+                    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+                    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+                    <script src="assets/js/main.js"></script>
+
+    </body>
 
 </html>
