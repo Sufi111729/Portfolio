@@ -1,6 +1,6 @@
 # Personal Web Platform
 
-This is my personal web platform, showcasing my work, projects, and skills as a developer. You can view it live at [https://sufi1portfolio.netlify.app/](https://sufi1portfolio.netlify.app/).
+This is my personal web platform, showcasing my work, projects, and skills as a developer. You can view it live at [https://sufi1portfolio.netlify.app/](https://sufi1portfolio.netlify.app).
 
 ## Features
 
