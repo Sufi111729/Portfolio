@@ -42,7 +42,7 @@ If you want to test the PHP features (like the contact form), you need to have a
 
 php -S localhost:8000
 
-Open your browser and go to http://localhost:8000 to see the portfolio.
+Open your browser and go to (https://sufi1portfolio.netlify.app/) to see the portfolio.
 
 Contributing
 
