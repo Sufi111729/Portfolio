@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .payment-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 350px;
+        }
+
+        .payment-card h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .payment-card p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-razorpay {
+            background: #0086f3;
+            color: white;
+        }
+
+        .btn-razorpay:hover {
+            background: #0071cc;
+        }
+
+        .btn-upi {
+            background: #25d366;
+            color: white;
+        }
+
+        .btn-upi:hover {
+            background: #1da851;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-card">
+        <h2>Choose Option</h2>
+        <p>Choose your preferred payment method:</p>
+        
+        <a href="https://razorpay.com/payment-link/plink_Q62meqNYiPzYe5/test" class="btn btn-razorpay">Pay via Razorpay</a>
+        <a href="upi://pay?pa=sufi111729@okicici&pn=Muhammad Sufiyan&am=500&cu=INR" class="btn btn-upi">Pay ₹500 via UPI</a>
+    </div>
+
+</body>
+</html>

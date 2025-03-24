@@ -15,7 +15,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +41,8 @@
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -49,10 +52,10 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
+          <li><a href="index.html#hero" >Home</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="portfolio-details.html">Portfolio</a></li>
+          <li><a href="portfolio-details.html" class="active">Portfolio</a></li>
           <li><a href="service.html">Services</a></li>
           <li class="dropdown"><a href="#"><span>Web</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -78,20 +81,22 @@
 
       <div class="header-social-links">
         <a href="https://twitter.com/username" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.instagram.com/sufiyan2k1/?igsh=ODRtNGZzeWl0d2gx" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/muhammad-sufiyan-30a41a241/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/sufiyan2k1/?igsh=ODRtNGZzeWl0d2gx" class="instagram"><i
+            class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/muhammad-sufiyan-30a41a241/" class="linkedin"><i
+            class="bi bi-linkedin"></i></a>
         <a href="https://github.com/Sufi111729" class="github"><i class="bi bi-github"></i></a>
-        <a href="https://youtube.com/@javaindeep?si=DU5zKQsezn3g6vWO?sub_confirmation=1" class="youtube"><i class="bi bi-youtube"></i></a>
-    </div>
-    
+        <a href="https://youtube.com/@javaindeep?si=DU5zKQsezn3g6vWO?sub_confirmation=1" class="youtube"><i
+            class="bi bi-youtube"></i></a>
+      </div>
+
 
     </div>
   </header>
 
   <main class="main">
 
-  <main class="main">
-    <div class="page-title">
+    <div class="page-title text-center">
       <div class="title-wrapper">
         <h1>Portfolio Details</h1>
         <p>Welcome to my portfolio! I am Muhammad Sufiyan, a Java Full Stack Developer passionate about coding and web
@@ -99,70 +104,107 @@
       </div>
     </div>
 
-    <section id="portfolio-details" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
-        <div class="row gy-4 g-lg-5">
-          <div class="col-lg-6">
-            <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid mb-4" alt="Portfolio Image">
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center">
+          <!-- Profile Image -->
+          <div class="col-lg-6 text-center" data-aos="fade-right" data-aos-delay="200">
+            <img src="assets/img/profile/Sufiyan.jpg" alt="Profile Image" class="img-fluid rounded-4"
+              style="max-width: 400px;">
           </div>
-          <div class="col-lg-6">
-            <div class="position-sticky" style="top: 40px">
-              <div class="portfolio-description">
-                <h2>About This Project</h2>
-                <p>
-                  This project showcases my expertise in Java Full Stack Development, React, SQL, and API integration. I
-                  have worked on various web applications, including e-commerce, portfolio sites, and database-driven
-                  platforms.
-                </p>
-              </div>
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Coding is my passion, and I love solving complex problems with efficient solutions."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <div>
-                  <h3>Muhammad Sufiyan</h3>
-                  <h4>Java Full Stack Developer</h4>
+
+          <!-- About Content -->
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content">
+              <span class="subtitle">About Me</span>
+              <h2>Java Developer & Web Developer</h2>
+              <p class="lead">I specialize in Java development, creating efficient and high-performing applications.
+                With experience in full-stack development, I build user-friendly and scalable web applications.</p>
+              <p>Passionate about learning and implementing the latest technologies in software development.</p>
+
+              <div class="personal-info">
+                <div class="row g-3">
+                  <div class="col-md-6"><strong>Name:</strong> Muhammad Sufiyan</div>
+                  <div class="col-md-6"><strong>Phone:</strong> 8574774647</div>
+                  <div class="col-md-6"><strong>Email:</strong> sufi111729@gmail.com</div>
+                  <div class="col-md-6"><strong>Occupation:</strong> Java Developer</div>
+                  <div class="col-md-6"><strong>Nationality:</strong> India</div>
                 </div>
               </div>
-              <div class="portfolio-info mt-5">
-                <h3>Project information</h3>
-                <ul>
-                  <li><strong>Category:</strong> Web Development</li>
-                  <li><strong>Client:</strong> PrimeHouse</li>
-                  <li><strong>Project date:</strong> 10 March, 2025</li>
-                  <li><strong>Project URL:</strong> <a href="#">www.muhammadsufiyan.dev</a></li>
-                  <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
-                </ul>
+
+              <div class="signature mt-4 d-flex align-items-center">
+                <img src="assets/img/misc/Untitled_design-removebg-preview.png" alt="Signature" class="img-fluid me-3"
+                  style="max-width: 150px;">
+                <div>
+                  <h4>Muhammad Sufiyan</h4>
+                  <p>Java Developer</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Muhammad Sufiyan</strong> <span>All Rights
-            Reserved</span></p>
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="portfolio-description">
+              <h2>About This Project</h2>
+              <p>"This project highlights my expertise in front-end development using HTML, CSS, and JavaScript. I have
+                worked on multiple web applications, including portfolio sites and interactive UI components. You can
+                also explore my personal website, where I showcase my projects, skills, and experience in detail."
+
+              </p>
+            </div>
+
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                "Coding is my passion, and I love solving complex problems with efficient solutions."
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <h3>Muhammad Sufiyan</h3>
+              <h4>Java Full Stack Developer</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info mt-4">
+              <h3>Project Information</h3>
+              <ul class="list-unstyled">
+                <li><strong>Category:</strong> Web Development</li>
+                <li><strong>Client:</strong>SUFI WEB</li>
+                <li><strong>Project Date:</strong> 25 March, 2025</li>
+                <li><strong>Project URL:</strong> <a href="https://sufiweb.netlify.app/">https://sufiweb.netlify.app</a></li>
+              </ul>
+              <a href="https://sufiweb.netlify.app/" class="btn btn-primary">Visit Website</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="credits">
-        Designed by <a href="#">Muhammad Sufiyan</a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer text-center py-4">
+      <div class="container">
+        <p>© <strong class="px-1 sitename">Muhammad Sufiyan</strong> All Rights Reserved</p>
+        <p>Designed by <a href="#">Muhammad Sufiyan</a></p>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 

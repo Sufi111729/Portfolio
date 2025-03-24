@@ -1952,3 +1952,10 @@ section,
   }
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   /* Full viewport height */
+  text-align: center;
+}
