@@ -16,7 +16,7 @@ const Portfolio = () => {
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="relative group">
               <img
-                src="src/img/photo_2025-04-13_11-26-28.jpg"
+                src="src/components/img/photo_2025-04-13_11-26-28.jpg"
                 alt="Muhammad Sufiyan"
                 className="w-80 h-80 rounded-2xl object-cover border-4 border-black shadow-[0_0_40px_5px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-105"
               />
