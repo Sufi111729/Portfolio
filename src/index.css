@@ -1,0 +1,61 @@
+@tailwind  base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  @apply bg-black text-white;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  @apply relative flex w-full items-center justify-center py-4 text-sm text-white/80 transition-all duration-300;
+}
+
+.nav-link:hover {
+  @apply text-white;
+}
+
+.nav-link.active {
+  @apply text-white;
+}
+
+.nav-link.active::after {
+  content: '';
+  @apply absolute right-0 top-1/2 h-full w-0.5 -translate-y-1/2 bg-white;
+}
+
+.sidebar-icon {
+  @apply h-5 w-5;
+}
+
+/* Group hover styles without @apply */
+.nav-link span {
+  position: absolute;
+  left: 100%;
+  margin-left: 1rem;
+  background-color: #1A1A1A;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover span {
+  opacity: 1;
+}
+ 
