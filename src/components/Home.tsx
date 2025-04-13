@@ -3,13 +3,17 @@ import  { ArrowDown } from 'lucide-react';
 const Home = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative">
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Using the wooden board image which has a nice dark minimalist look */}
-        <img src="src/components/img/image.png" alt="Dark Wooden Background" />
-        {/* Adding a gradient overlay to improve text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
-      </div>
-      
+    <div className="absolute inset-0 overflow-hidden">
+      {/* Using the wooden board image which has a nice dark minimalist look */}
+      <img 
+        src="src\img\image.png" 
+        alt="Dark Wooden Background" 
+        className="w-full h-full object-cover opacity-40"
+      />
+      {/* Adding a gradient overlay to improve text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80"></div>
+    </div>
+  
       <div className="relative z-10 w-full max-w-4xl mx-auto px-6 flex flex-col items-center justify-center text-center">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-serif font-bold mb-6">
           Muhammad Sufiyan
