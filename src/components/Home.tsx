@@ -6,7 +6,7 @@ const Home = () => {
     <div className="absolute inset-0 overflow-hidden">
       {/* Using the wooden board image which has a nice dark minimalist look */}
       <img 
-        src="src\img\image.png" 
+        src="https://i.ibb.co/Mk2Zt98k/image.png" 
         alt="Dark Wooden Background" 
         className="w-full h-full object-cover opacity-40"
       />

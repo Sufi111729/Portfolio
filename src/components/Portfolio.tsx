@@ -13,16 +13,16 @@ const Portfolio = () => {
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
 
           {/* LEFT: Your Image */}
-          <div className="w-full lg:w-1/2 flex justify-center">
-            <div className="relative group">
-              <img
-                src="src/img/photo_2025-04-13_11-26-28.jpg"
-                alt="Muhammad Sufiyan"
-                className="w-80 h-80 rounded-2xl object-cover border-4 border-black shadow-[0_0_40px_5px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-black group-hover:ring-black transition duration-500"></div>
-            </div>
-          </div>
+<div className="w-full lg:w-1/2 flex justify-center">
+  <div className="relative group">
+    <img
+      src="https://i.ibb.co/fzsT3q48/photo-2025-04-13-11-26-28.jpg"
+      alt="Muhammad Sufiyan"
+      className="w-80 h-80 rounded-2xl object-cover border-4 border-black shadow-[0_0_40px_5px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-105"
+    />
+    <div className="absolute inset-0 rounded-2xl ring-1 ring-black group-hover:ring-black transition duration-500"></div>
+  </div>
+</div>
 
 
 
