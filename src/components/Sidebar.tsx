@@ -63,7 +63,7 @@ const Sidebar = () => {
       
       <div className="mt-auto pb-6 w-full flex flex-col items-center space-y-6">
         <a 
-          href="https://ecommerce.sufiyan.tech" 
+          href="https://qamarcart.netlify.app" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="nav-link"
