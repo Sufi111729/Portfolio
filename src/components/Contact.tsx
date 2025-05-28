@@ -30,7 +30,7 @@ const Contact = () => {
     };
 
     try {
-      await emailjs.send("service_paukjvw","template_vxls4hb",templateParams);
+      await emailjs.send('service_paukjvw', 'template_9ggh5t9', templateParams);
       setSubmitMessage('✅ Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
