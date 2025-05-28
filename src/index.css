@@ -1,0 +1,74 @@
+@tailwind  base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark text-white;
+  overflow-x: hidden;
+}
+
+.neon-border {
+  box-shadow: 0 0 5px #E11D48, 0 0 10px #E11D48, 0 0 15px #E11D48;
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #E11D48, #F43F5E, #FF2D55);
+  z-index: -1;
+  border-radius: 0.5rem;
+  animation: border-animation 3s ease-in-out infinite;
+}
+
+@keyframes border-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.skill-card {
+  @apply p-4 rounded-lg transition-transform duration-300 bg-dark-light hover:scale-105 hover:shadow-lg;
+  background: linear-gradient(145deg, #1E1A1D, #171416);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-text {
+  @apply animate-glow;
+  background: linear-gradient(90deg, #E11D48, #F43F5E, #FF2D55);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-card {
+  background: rgba(30, 26, 29, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #E11D48, #F43F5E);
+  margin-top: 8px;
+}
+ 
