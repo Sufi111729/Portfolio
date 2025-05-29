@@ -12,7 +12,7 @@ const Footer = () => {
           
           <div className="text-center md:text-right">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} All rights reserved. Built with <Heart className="inline-block text-red-500" size={14} />
+              © {new Date().getFullYear()} Muhammad Sufiyan. All rights reserved. <Heart className="inline-block text-red-500" size={14} />
             </p>
           </div>
         </div>

@@ -39,7 +39,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
               </a>
               <a 
-                href="#" 
+                href="https://www.overleaf.com/download/project/6793d2f90c3e6e30177279d9/build/1971a8a0707-1123b9385c3ee8ed/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-n2d-c-f-97cl&enable_pdf_caching=true&popupDownload=true" 
                 className="px-6 py-3 bg-transparent border border-neon text-white rounded-full hover:bg-neon/10 transition-all flex items-center"
               >
                 <Download className="mr-2" size={18} />
@@ -69,7 +69,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-r from-primary to-secondary p-1 shadow-lg shadow-primary/30">
                 <img 
-                  src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixid=M3w3MjUzNDh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYWxlJTIwZGV2ZWxvcGVyJTIwcG9ydHJhaXQlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NDg0NDQ2MDZ8MA&ixlib=rb-4.1.0&fit=fillmax&h=600&w=800" 
+                  src="src/photo_2025-05-29_09-57-10.jpg" 
                   alt="Muhammad Sufiyan" 
                   className="w-full h-full object-cover rounded-full"
                 />
