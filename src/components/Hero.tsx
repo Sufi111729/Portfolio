@@ -69,7 +69,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-r from-primary to-secondary p-1 shadow-lg shadow-primary/30">
                 <img 
-                  src="src/photo_2025-05-29_09-57-10.jpg" 
+                  src="https://raw.githubusercontent.com/Sufi111729/Portfolio/refs/heads/main/src/photo_2025-05-29_09-57-10.jpg" 
                   alt="Muhammad Sufiyan" 
                   className="w-full h-full object-cover rounded-full"
                 />
