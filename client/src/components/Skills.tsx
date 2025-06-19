@@ -52,10 +52,10 @@ export default function Skills() {
     <section id="skills" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Skills & Competencies</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
           <div className="w-24 h-1 gradient-primary mx-auto mb-6 rounded"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A comprehensive skill set covering modern web technologies, from frontend frameworks to backend services
+            My technical expertise spans across multiple technologies, with strong proficiency in Java development, modern web frameworks, and database management
           </p>
         </div>
         

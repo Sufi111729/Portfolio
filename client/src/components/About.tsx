@@ -16,19 +16,54 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
           <div className="w-24 h-1 gradient-primary mx-auto mb-6 rounded"></div>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
             <Card className="bg-gray-50 border-0 shadow-sm">
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                   <Target className="text-primary mr-3 h-5 w-5" />
-                  Objective
+                  About Me
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {personalInfo.objective}
-                </p>
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    Hello! I'm <strong>{personalInfo.name}</strong>, a passionate Full Stack Java Developer based in {personalInfo.location}. 
+                    I specialize in building robust web applications using modern technologies like Spring Boot, React, and MySQL.
+                  </p>
+                  <p>
+                    {personalInfo.objective}
+                  </p>
+                  <div className="bg-primary/5 p-4 rounded-lg border-l-4 border-primary">
+                    <p className="text-primary font-medium">Current Status:</p>
+                    <p className="text-gray-600">{personalInfo.availability}</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
+            
+            <Card className="bg-white border-0 shadow-sm">
+              <CardContent className="p-6">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Professional Highlights</h4>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <span className="text-gray-700">2+ years of hands-on development experience</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-secondary rounded-full mr-3"></div>
+                    <span className="text-gray-700">Expertise in full-stack Java development</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                    <span className="text-gray-700">Strong background in REST APIs and microservices</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-gray-700">Experience with modern frontend frameworks</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {stats.map((stat, index) => (
                 <div key={index} className={`text-center ${stat.color} rounded-lg p-4`}>

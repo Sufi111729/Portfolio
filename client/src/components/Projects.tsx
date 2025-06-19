@@ -9,10 +9,10 @@ export default function Projects() {
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">My Projects</h2>
           <div className="w-24 h-1 gradient-primary mx-auto mb-6 rounded"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A showcase of my recent work, demonstrating proficiency in full-stack development and modern web technologies
+            Here are some of the key projects I've built, showcasing my experience with full-stack Java development, Spring Boot, React, and modern web technologies
           </p>
         </div>
 

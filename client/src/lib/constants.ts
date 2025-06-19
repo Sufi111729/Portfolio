@@ -26,6 +26,30 @@ export const personalInfo = {
     softSkills: ["Communication", "Teamwork", "Problem-solving", "Adaptability"]
   },
   
+  workExperience: [
+    {
+      title: "Employee Management System",
+      company: "Personal Project",
+      period: "Dec 2022 – Jan 2023",
+      type: "Full Stack Development",
+      description: "Led the complete development lifecycle of a comprehensive Employee Management System, from database design to frontend implementation.",
+      responsibilities: [
+        "Developed a full-stack Employee Management System enabling Create, Read, Update, and Delete (CRUD) operations using Java, Spring Boot, and MySQL",
+        "Built a robust RESTful API backend for managing employee data with clearly structured endpoints and integrated error handling",
+        "Connected the frontend (React + TypeScript) with the backend using Axios to enable seamless client-server communication",
+        "Designed the database schema using MySQL and used JPA/Hibernate for efficient ORM mapping",
+        "Integrated Maven for project management and Postman for endpoint testing to ensure API functionality",
+        "Emphasized clean code practices, modular design, and scalability for future enhancements"
+      ],
+      technologies: ["Spring Boot", "React", "TypeScript", "MySQL", "Maven", "JPA/Hibernate", "REST APIs"],
+      achievements: [
+        "Successfully deployed application with 100% API endpoint functionality",
+        "Implemented responsive design ensuring cross-device compatibility",
+        "Created comprehensive documentation for API endpoints"
+      ]
+    }
+  ],
+
   projects: [
     {
       name: "Employee Management System",
