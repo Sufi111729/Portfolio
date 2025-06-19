@@ -4,7 +4,7 @@ import { Target, MapPin, Clock, Users } from "lucide-react";
 
 export default function About() {
   const stats = [
-    { value: "2+", label: "Years Experience", color: "bg-primary/5 text-primary" },
+    
     { value: "5+", label: "Projects Completed", color: "bg-secondary/5 text-secondary" },
     { value: "24/7", label: "Available", color: "bg-accent/5 text-accent" }
   ];
