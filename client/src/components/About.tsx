@@ -75,7 +75,7 @@ export default function About() {
           </div>
           <div className="space-y-4">
             <img
-              src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+              src="https://raw.githubusercontent.com/Sufi111729/Portfolio/refs/heads/main/attached_assets/image.png?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
               alt="Modern coding workspace setup"
               className="rounded-xl shadow-lg w-full h-auto"
             />
