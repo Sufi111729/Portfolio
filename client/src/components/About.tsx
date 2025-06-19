@@ -1,0 +1,74 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { personalInfo } from "@/lib/constants";
+import { Target, MapPin, Clock, Users } from "lucide-react";
+
+export default function About() {
+  const stats = [
+    { value: "2+", label: "Years Experience", color: "bg-primary/5 text-primary" },
+    { value: "5+", label: "Projects Completed", color: "bg-secondary/5 text-secondary" },
+    { value: "24/7", label: "Available", color: "bg-accent/5 text-accent" }
+  ];
+
+  return (
+    <section id="about" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+          <div className="w-24 h-1 gradient-primary mx-auto mb-6 rounded"></div>
+        </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <Card className="bg-gray-50 border-0 shadow-sm">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                  <Target className="text-primary mr-3 h-5 w-5" />
+                  Objective
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {personalInfo.objective}
+                </p>
+              </CardContent>
+            </Card>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {stats.map((stat, index) => (
+                <div key={index} className={`text-center ${stat.color} rounded-lg p-4`}>
+                  <div className="text-2xl font-bold">{stat.value}</div>
+                  <div className="text-sm text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="space-y-4">
+            <img
+              src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+              alt="Modern coding workspace setup"
+              className="rounded-xl shadow-lg w-full h-auto"
+            />
+            <Card className="gradient-primary text-white border-0">
+              <CardContent className="p-6">
+                <h4 className="font-semibold mb-4 flex items-center">
+                  <MapPin className="mr-2 h-4 w-4" />
+                  Location & Availability
+                </h4>
+                <div className="space-y-2">
+                  <p className="flex items-center">
+                    <span className="mr-2">📍</span>
+                    {personalInfo.location} (Open to relocation)
+                  </p>
+                  <p className="flex items-center">
+                    <Clock className="mr-2 h-4 w-4" />
+                    Available for immediate joining
+                  </p>
+                  <p className="flex items-center">
+                    <Users className="mr-2 h-4 w-4" />
+                    Open to remote opportunities
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
