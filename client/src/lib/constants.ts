@@ -103,7 +103,7 @@ export const personalInfo = {
     {
       name: "Full Stack Java Developer",
       issuer: "JSpiders, Bangalore",
-      year: "2022",
+      year: "2025",
       description: "Intensive full-stack development certification covering enterprise-level Java technologies and modern web development practices.",
       technologies: ["Core Java", "JDBC", "JSP", "Servlets", "Hibernate", "Spring Boot", "Git", "MySQL", "Postman"]
     }

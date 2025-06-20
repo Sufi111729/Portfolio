@@ -55,7 +55,7 @@ export default function Hero() {
           <div className="lg:w-1/2 flex justify-center animate-slide-up">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+               src="https://raw.githubusercontent.com/Sufi111729/Portfolio/refs/heads/main/attached_assets/image.png?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
                 alt="Professional developer headshot"
                 className="w-80 h-80 rounded-full shadow-2xl border-8 border-white/20 object-cover"
               />
