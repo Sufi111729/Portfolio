@@ -16,7 +16,7 @@ interface ContactFormData {
   message: string;
 }
 
-const CONTACT_API_URL = "https://contact-form-production-ce06.up.railway.app/api/contact";
+const CONTACT_API_URL = "https://contact-form-ergi.onrender.com/api/contact";
 
 export default function Contact() {
   const { toast } = useToast();
