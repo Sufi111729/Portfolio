@@ -28,7 +28,7 @@ export function createHeroSection() {
       <div class="hero-shell">
         <div class="hero-image" role="presentation" aria-hidden="true"></div>
         <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="hero-content grid grid-cols-[minmax(0,1fr)_320px] items-start gap-8">
+        <div class="hero-content grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
           <div class="reveal-on-scroll">
           <p class="caption-label">Portfolio</p>
           <h1 id="hero-title" class="mt-3 text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl">
@@ -58,7 +58,7 @@ export function createHeroSection() {
             </a>
           </div>
           </div>
-          <aside class="card reveal-on-scroll justify-self-end" aria-label="Quick Info">
+          <aside class="card reveal-on-scroll lg:justify-self-end" aria-label="Quick Info">
             <figure class="mb-5">
               <img
                 src="/img/profile.jpg.webp"
@@ -72,10 +72,10 @@ export function createHeroSection() {
               ${infoRows}
             </div>
           </aside>
-          <div class="hero-stats lg:col-span-2">
-            ${highlightCards}
-          </div>
         </div>
+      </div>
+      <div class="hero-stats section-container">
+        ${highlightCards}
       </div>
     </section>
   `;

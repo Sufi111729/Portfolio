@@ -12,6 +12,8 @@ const revealTargets = Array.from(document.querySelectorAll('.reveal-on-scroll'))
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const themeToggle = document.querySelector('[data-theme-toggle]');
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const navToggle = document.querySelector('[data-nav-toggle]');
+const navMenu = document.querySelector('[data-nav-menu]');
 
 function setTheme(theme) {
   if (theme === 'dark') {
@@ -121,5 +123,20 @@ mediaQuery.addEventListener('change', (event) => {
   const stored = getStoredTheme();
   if (stored !== 'dark' && stored !== 'light') {
     setTheme(event.matches ? 'dark' : 'light');
+  }
+});
+
+function toggleMobileMenu(forceClose = false) {
+  if (!navMenu || !navToggle) return;
+  navMenu.classList.toggle('is-open', !forceClose && !navMenu.classList.contains('is-open'));
+  navToggle.setAttribute('aria-expanded', navMenu.classList.contains('is-open') ? 'true' : 'false');
+  navMenu.classList.toggle('nav-menu', navMenu.classList.contains('is-open'));
+}
+
+navToggle?.addEventListener('click', () => toggleMobileMenu());
+
+navMenu?.addEventListener('click', (event) => {
+  if (event.target instanceof HTMLElement && event.target.matches('a[data-spy-link]')) {
+    toggleMobileMenu(true);
   }
 });
