@@ -65,6 +65,8 @@ export function createHeroSection() {
                 alt="Portrait of Sufi"
                 class="h-56 w-full rounded-md border border-slate-200 object-cover object-top"
                 loading="eager"
+                decoding="async"
+                fetchpriority="high"
               />
               <br/>
             <h2 class="text-base font-semibold text-slate-900">Quick Info</h2>
