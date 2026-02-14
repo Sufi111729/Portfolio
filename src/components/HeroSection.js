@@ -58,7 +58,7 @@ export function createHeroSection() {
             </a>
           </div>
           </div>
-          <aside class="card reveal-on-scroll lg:justify-self-end" aria-label="Quick Info">
+          <aside class="card quick-info-card reveal-on-scroll lg:justify-self-end" aria-label="Quick Info">
             <figure class="mb-5">
               <img
                 src="/img/profile.jpg.webp"

@@ -12,8 +12,7 @@ export function createHeader() {
     <header id="site-header" class="site-header">
       <div class="site-header-inner">
         <a href="#" class="site-brand">
-          <span class="site-brand-mark">S</span>
-          <span class="site-brand-text">Sufi</span>
+          <span class="site-brand-mark" aria-hidden="true"></span>
         </a>
         <nav aria-label="Primary" class="nav-list" data-nav-menu>
           ${navItems}

@@ -147,6 +147,14 @@ body[data-theme='dark'] .hero-overlay {
   border: 1px solid var(--border);
 }
 
+.quick-info-card {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+body[data-theme='dark'] .quick-info-card {
+  background: rgba(15, 23, 42, 0.72);
+}
+
 .chip {
   @apply inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium;
   background: var(--bg-soft);
@@ -185,9 +193,13 @@ body[data-theme='dark'] .hero-overlay {
 }
 
 .site-brand-mark {
-  @apply flex h-9 w-9 items-center justify-center rounded-full text-sm font-semibold;
-  background: var(--text);
-  color: var(--bg);
+  @apply flex h-9 w-9 items-center justify-center;
+  background-color: transparent;
+  border: none;
+  background-image: url('/favicon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 86%;
 }
 
 .site-brand-text {
