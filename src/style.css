@@ -196,7 +196,7 @@ body[data-theme='dark'] .quick-info-card {
   @apply flex h-9 w-9 items-center justify-center;
   background-color: transparent;
   border: none;
-  background-image: url('/favicon.svg');
+  background-image: url('/favicon.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 86%;

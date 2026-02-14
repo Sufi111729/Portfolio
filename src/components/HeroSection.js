@@ -51,7 +51,7 @@ export function createHeroSection() {
               View Projects
             </a>
             <a
-              href="/resume.pdf"
+              href="/Muhammad_Sufiyan.pdf"
               class="inline-flex items-center rounded-md border border-slate-300 px-5 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Download Resume
