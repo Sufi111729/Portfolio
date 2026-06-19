@@ -11,20 +11,30 @@ function createFeatureList(items) {
 
 export function createProjectsSection() {
   const projectCards = projects
-    .map(
-      (project) => `
-        <article class="card reveal-on-scroll">
-          <div class="flex flex-wrap items-start justify-between gap-4">
-            <h3 class="text-xl font-semibold tracking-tight text-slate-900">${project.name}</h3>
-            <div class="flex items-center gap-3">
-              <a href="${project.githubUrl}" class="link-accent text-sm">GitHub</a>
-              <a href="${project.liveDemoUrl}" class="link-accent text-sm">Live Demo</a>
+    .map((project, index) => {
+      const links = [
+        project.githubUrl
+          ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-secondary" aria-label="Open ${project.name} GitHub repository">GitHub</a>`
+          : '',
+        project.liveDemoUrl
+          ? `<a href="${project.liveDemoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-primary" aria-label="Open ${project.name} live demo">Live Demo</a>`
+          : ''
+      ].join('');
+      const cardClass = index === 0 ? 'project-card project-card-featured reveal-on-scroll' : 'project-card reveal-on-scroll';
+
+      return `
+        <article class="${cardClass}">
+          <div class="project-card-header">
+            <div>
+              ${index === 0 ? '<p class="caption-label">Main Project</p>' : '<p class="caption-label">Project</p>'}
+              <h3 class="mt-2 text-xl font-semibold tracking-tight text-slate-900">${project.name}</h3>
             </div>
+            ${links ? `<div class="project-actions">${links}</div>` : ''}
           </div>
-          <div class="mt-5 grid gap-3 rounded-md border border-slate-200 bg-slate-50/60 p-4">
-            <p class="text-sm leading-6 text-slate-700"><span class="font-semibold text-slate-900">Problem:</span> ${project.problem}</p>
-            <p class="text-sm leading-6 text-slate-700"><span class="font-semibold text-slate-900">Solution:</span> ${project.solution}</p>
-            <p class="text-sm leading-6 text-slate-700"><span class="font-semibold text-slate-900">Outcome:</span> ${project.outcome}</p>
+          <div class="project-summary-grid">
+            <p><span>Problem</span>${project.problem}</p>
+            <p><span>Solution</span>${project.solution}</p>
+            <p><span>Outcome</span>${project.outcome}</p>
           </div>
           <section class="mt-6">
             <h4 class="caption-label">Key Features</h4>
@@ -34,8 +44,8 @@ export function createProjectsSection() {
             ${project.tech.map((item) => `<span class="chip">${item}</span>`).join('')}
           </div>
         </article>
-      `
-    )
+      `;
+    })
     .join('');
 
   return `
@@ -43,9 +53,9 @@ export function createProjectsSection() {
       ${createSectionHeading(
         'projects-title',
         'Projects',
-        'Selected full-stack projects with implementation details and ownership areas.'
+        'Selected projects with practical problem solving, backend logic, and frontend workflows.'
       )}
-      <div class="mt-8 space-y-6">
+      <div class="mt-10 grid gap-5 lg:grid-cols-2">
         ${projectCards}
       </div>
     </section>

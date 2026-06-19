@@ -14,6 +14,8 @@ const themeToggle = document.querySelector('[data-theme-toggle]');
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 const navToggle = document.querySelector('[data-nav-toggle]');
 const navMenu = document.querySelector('[data-nav-menu]');
+const copyEmailButton = document.querySelector('[data-copy-email]');
+const copyFeedback = document.querySelector('[data-copy-feedback]');
 
 function setTheme(theme) {
   if (theme === 'dark') {
@@ -138,5 +140,35 @@ navToggle?.addEventListener('click', () => toggleMobileMenu());
 navMenu?.addEventListener('click', (event) => {
   if (event.target instanceof HTMLElement && event.target.matches('a[data-spy-link]')) {
     toggleMobileMenu(true);
+  }
+});
+
+document.addEventListener('click', (event) => {
+  if (!navMenu?.classList.contains('is-open') || !navToggle) return;
+  if (!(event.target instanceof Node)) return;
+  if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+    toggleMobileMenu(true);
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    toggleMobileMenu(true);
+  }
+});
+
+copyEmailButton?.addEventListener('click', async () => {
+  const email = copyEmailButton.getAttribute('data-copy-email');
+  if (!email) return;
+
+  try {
+    await navigator.clipboard.writeText(email);
+    if (copyFeedback) {
+      copyFeedback.textContent = 'Email copied to clipboard.';
+    }
+  } catch {
+    if (copyFeedback) {
+      copyFeedback.textContent = email;
+    }
   }
 });

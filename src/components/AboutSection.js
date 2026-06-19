@@ -1,9 +1,19 @@
-import { aboutSummary } from '../data/portfolio.js';
+import { aboutHighlights, aboutSummary } from '../data/portfolio.js';
 import { createSectionHeading } from './SectionHeading.js';
 
 export function createAboutSection() {
-  const items = aboutSummary
-    .map((line) => `<li class="text-slate-700 leading-7">${line}</li>`)
+  const summaryItems = aboutSummary
+    .map((line) => `<p class="text-slate-700 leading-7">${line}</p>`)
+    .join('');
+  const highlightCards = aboutHighlights
+    .map(
+      (item) => `
+        <article class="mini-card">
+          <h3 class="text-base font-semibold text-slate-900">${item.title}</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-600">${item.text}</p>
+        </article>
+      `
+    )
     .join('');
 
   return `
@@ -11,11 +21,16 @@ export function createAboutSection() {
       ${createSectionHeading(
         'about-title',
         'About',
-        'I focus on building maintainable systems with clear architecture and practical performance improvements.'
+        'Java Full Stack Developer focused on practical, maintainable web applications.'
       )}
-      <ul class="mt-8 max-w-3xl space-y-4">
-        ${items}
-      </ul>
+      <div class="mt-10 grid gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)]">
+        <div class="card section-copy">
+          ${summaryItems}
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          ${highlightCards}
+        </div>
+      </div>
     </section>
   `;
 }
